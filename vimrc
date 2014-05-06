@@ -5,24 +5,20 @@ execute pathogen#helptags()
 "python powerline_setup()
 "python del powerline_setup
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#tab_nr_type = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'simple'
 
-"if !exists('g:airline_symbols')
-"  let g:airline_symbols = {}
-"endif
-
-"let g:airline_powerline_fonts = 0
-"let g:airline_symbols = {}
-"let g:airline_left_sep = ''
-
-syntax on
-"set background=dark
+"syntax on
+syntax enable
+set background=dark
 "let g:solarized_termcolors=256
 "colorscheme solarized
 filetype plugin indent on
 compiler ruby
+colorscheme slate
 
+set wildmode=list:full
 set t_Co=256
 set ttymouse=xterm2
 set backspace=indent,eol,start
@@ -46,12 +42,12 @@ let g:ack_default_options = ' -s -H --nocolor --nogroup --column --ignore-dir=tm
 let g:aghighlight=1
 
 let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_max_files = 0
+let g:ctrlp_lazy_update = 100
 let g:ctrlp_custom_ignore = {
     \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.idea$',
     \ 'file': '\.pyc$\|\.pyo$\|\.rbc$|\.rbo$\|\.class$\|\.o$\|\~$\',
     \ }
-let g:ctrlp_max_files = 0
-let g:ctrlp_lazy_update = 100
 
 let NERDTreeShowHidden=1
 
@@ -84,6 +80,7 @@ nnoremap <silent> <LocalLeader>tb :Tagbar<cr>
 nnoremap <leader>uf :<C-u>Unite file_rec<CR>
 nnoremap <leader>af :<C-u>Unite file_rec/async:!<CR>
 nnoremap <silent> <leader>ub :<C-u>Unite buffer bookmark<CR>
+nnoremap <silent> <LocalLeader>ww :%s/\s\+$//<CR>:let @/=''<CR><C-o>
 
 function! ToggleRelativeNumber()
   if &relativenumber
