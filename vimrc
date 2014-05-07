@@ -18,9 +18,6 @@ filetype plugin indent on
 compiler ruby
 colorscheme slate
 
-set wildmode=list:full
-set t_Co=256
-set ttymouse=xterm2
 set backspace=indent,eol,start
 set dir=/tmp//
 set hlsearch
@@ -31,9 +28,11 @@ set nocompatible
 set noshowmode
 set nu
 set pastetoggle=<F2>
+set scrolloff=5
 set smartcase
 set textwidth=0 nosmartindent tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 set ttimeoutlen=50
+set wildmode=list:full
 
 let g:ackhighlight = 1
 let g:ackprg = 'ack'
