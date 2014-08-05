@@ -4,12 +4,7 @@ execute pathogen#helptags()
 "python from powerline.vim import setup as powerline_setup
 "python powerline_setup()
 "python del powerline_setup
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#tab_nr_type = 1
-let g:airline_powerline_fonts = 1
-let g:airline_theme = 'simple'
 
-"syntax on
 syntax enable
 set background=dark
 "let g:solarized_termcolors=256
@@ -31,8 +26,47 @@ set pastetoggle=<F2>
 set scrolloff=5
 set smartcase
 set textwidth=0 nosmartindent tabstop=2 shiftwidth=2 softtabstop=2 expandtab
-set ttimeoutlen=50
+set notimeout
+set ttimeout
+set ttimeoutlen=10
 set wildmode=list:full
+
+set wildignore+=.hg,.git,.svn                    " Version control
+set wildignore+=*.aux,*.out,*.toc                " LaTeX intermediate files
+set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg   " binary images
+set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest " compiled object files
+set wildignore+=*.spl                            " compiled spelling word lists
+set wildignore+=*.sw?                            " Vim swap files
+set wildignore+=*.DS_Store                       " OSX bullshit
+set wildignore+=*.luac                           " Lua byte code
+set wildignore+=migrations                       " Django migrations
+set wildignore+=*.pyc                            " Python byte code
+
+set backup                        " enable backups
+set noswapfile                    " it's 2013, Vim.
+
+set undodir=~/.vim/tmp/undo//     " undo files
+set backupdir=~/.vim/tmp/backup// " backups
+set directory=~/.vim/tmp/swap//   " swap files
+
+" Make those folders automatically if they don't already exist.
+if !isdirectory(expand(&undodir))
+    call mkdir(expand(&undodir), "p")
+endif
+if !isdirectory(expand(&backupdir))
+    call mkdir(expand(&backupdir), "p")
+endif
+if !isdirectory(expand(&directory))
+    call mkdir(expand(&directory), "p")
+endif
+
+" Highlight VCS conflict markers
+match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#tab_nr_type = 1
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'simple'
 
 let g:ackhighlight = 1
 let g:ackprg = 'ack'
@@ -89,3 +123,117 @@ function! ToggleRelativeNumber()
   endif
 endfunction
 
+function! NyanMe()
+    hi NyanFur             guifg=#BBBBBB
+    hi NyanPoptartEdge     guifg=#ffd0ac
+    hi NyanPoptartFrosting guifg=#fd3699 guibg=#fe98ff
+    hi NyanRainbow1        guifg=#6831f8
+    hi NyanRainbow2        guifg=#0099fc
+    hi NyanRainbow3        guifg=#3cfa04
+    hi NyanRainbow4        guifg=#fdfe00
+    hi NyanRainbow5        guifg=#fc9d00
+    hi NyanRainbow6        guifg=#fe0000
+
+
+    echohl NyanRainbow1
+    echon "≈"
+    echohl NyanRainbow2
+    echon "≋"
+    echohl NyanRainbow3
+    echon "≈"
+    echohl NyanRainbow4
+    echon "≋"
+    echohl NyanRainbow5
+    echon "≈"
+    echohl NyanRainbow6
+    echon "≋"
+    echohl NyanRainbow1
+    echon "≈"
+    echohl NyanRainbow2
+    echon "≋"
+    echohl NyanRainbow3
+    echon "≈"
+    echohl NyanRainbow4
+    echon "≋"
+    echohl NyanRainbow5
+    echon "≈"
+    echohl NyanRainbow6
+    echon "≋"
+    echohl None
+    echo ""
+
+    echohl NyanRainbow1
+    echon "≈"
+    echohl NyanRainbow2
+    echon "≋"
+    echohl NyanRainbow3
+    echon "≈"
+    echohl NyanRainbow4
+    echon "≋"
+    echohl NyanRainbow5
+    echon "≈"
+    echohl NyanRainbow6
+    echon "≋"
+    echohl NyanRainbow1
+    echon "≈"
+    echohl NyanRainbow2
+    echon "≋"
+    echohl NyanRainbow3
+    echon "≈"
+    echohl NyanRainbow4
+    echon "≋"
+    echohl NyanRainbow5
+    echon "≈"
+    echohl NyanRainbow6
+    echon "≋"
+    echohl NyanFur
+    echon "╰"
+    echohl NyanPoptartEdge
+    echon "⟨"
+    echohl NyanPoptartFrosting
+    echon "⣮⣯⡿"
+    echohl NyanPoptartEdge
+    echon "⟩"
+    echohl NyanFur
+    echon "⩾^ω^⩽"
+    echohl None
+    echo ""
+
+    echohl NyanRainbow1
+    echon "≈"
+    echohl NyanRainbow2
+    echon "≋"
+    echohl NyanRainbow3
+    echon "≈"
+    echohl NyanRainbow4
+    echon "≋"
+    echohl NyanRainbow5
+    echon "≈"
+    echohl NyanRainbow6
+    echon "≋"
+    echohl NyanRainbow1
+    echon "≈"
+    echohl NyanRainbow2
+    echon "≋"
+    echohl NyanRainbow3
+    echon "≈"
+    echohl NyanRainbow4
+    echon "≋"
+    echohl NyanRainbow5
+    echon "≈"
+    echohl NyanRainbow6
+    echon "≋"
+    echohl None
+    echon " "
+    echohl NyanFur
+    echon "”   ‟"
+    echohl None
+
+    sleep 1
+    redraw
+    echo " "
+    echo " "
+    echo "Noms?"
+    redraw
+endfunction
+command! NyanMe call NyanMe()
