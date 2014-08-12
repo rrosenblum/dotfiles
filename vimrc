@@ -113,6 +113,13 @@ nnoremap <silent> <LocalLeader>tb :Tagbar<cr>
 nnoremap <leader>uf :<C-u>Unite file_rec<CR>
 nnoremap <leader>af :<C-u>Unite file_rec/async:!<CR>
 nnoremap <silent> <leader>ub :<C-u>Unite buffer bookmark<CR>
+
+" Highlight trailing whitespace
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
+" Set up highlight group & retain through colorscheme changes
+highlight ExtraWhitespace ctermbg=red guibg=red
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 nnoremap <silent> <LocalLeader>ww :%s/\s\+$//<CR>:let @/=''<CR><C-o>
 
 function! ToggleRelativeNumber()
@@ -237,3 +244,4 @@ function! NyanMe()
     redraw
 endfunction
 command! NyanMe call NyanMe()
+
