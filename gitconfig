@@ -4,12 +4,13 @@
   st = status
   standup = "!standup() { if [ `date +"%A"` == 'Monday' ]; then TIME_FRAME='--since 3.days.ago'; else TIME_FRAME='--since yesterday'; fi; if [ -z $1 ]; then git log $TIME_FRAME; else git log $TIME_FRAME | grep -i $1; fi; }; standup"
   timecard = "!timecard() { if [ -z $1 ]; then git log --since 1.week.ago; else git log --since 1.week.ago | grep -i $1; fi; }; timecard"
+  unpushed = !"git log origin/$(git name-rev HEAD --name-only)..HEAD"
 [color]
 	ui = auto
 [color "branch"]
 	current = yellow reverse
 	local = yellow
-    	remote = green
+  remote = green
 [color "diff"]
 	meta = yellow bold
 	frag = magenta bold
@@ -21,5 +22,7 @@
 	untracked = cyan
 [format]
 	pretty = format:"%h %C(yellow)%ci%Creset %Cgreen%an%Creset | %s"
+[merge]
+  conflictstyle = diff3
 [push]
 	default = simple
