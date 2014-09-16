@@ -5,6 +5,8 @@ alias be='bundle exec'
 alias brake='bundle exec rake'
 alias bcap='bundle exec cap'
 
+alias cls="osascript -e 'if application \"Terminal\" is frontmost then tell application \"System Events\" to keystroke \"k\" using command down'"
+
 alias ove='cd ~/work/ove'
 alias sim='cd ~/work/simulcast'
 alias dep='cd ~/work/simulcast_deployment'
