@@ -95,6 +95,7 @@ let g:unite_source_grep_default_opts = '--exclude ''\.(git|svn|hg|bzr)'''
 let g:unite_source_grep_recursive_opt = '-R'
 
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
+map <LocalLeader>aw :Ack '<C-R><C-W>'
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nf :NERDTreeFind<CR>
 map <silent> <LocalLeader>ff :CtrlP<CR>
