@@ -84,8 +84,6 @@ let g:ctrlp_custom_ignore = {
 
 let NERDTreeShowHidden=1
 
-let g:signify_vcs_list = [ 'git' ]
-
 let g:syntastic_check_on_open = 1
 
 let g:unite_enable_start_insert = 1
@@ -122,6 +120,10 @@ autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
 highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 nnoremap <silent> <LocalLeader>ww :%s/\s\+$//<CR>:let @/=''<CR><C-o>
+highlight clear SignColumn
+highlight SignifySignAdd    cterm=bold ctermfg=119
+highlight SignifySignDelete cterm=bold ctermfg=167
+highlight SignifySignChange cterm=bold ctermfg=227
 
 function! ToggleRelativeNumber()
   if &relativenumber
