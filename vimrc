@@ -127,7 +127,7 @@ highlight SignifySignChange cterm=bold ctermfg=227
 
 function! ToggleRelativeNumber()
   if &relativenumber
-    set norelativenumber
+    set number
   else
     set relativenumber
   endif
