@@ -1,13 +1,13 @@
-alias ls='ls -G'
-alias grep='grep --color=always'
-
 alias be='bundle exec'
 alias brake='bundle exec rake'
 alias bcap='bundle exec cap'
 
 alias cls="osascript -e 'if application \"Terminal\" is frontmost then tell application \"System Events\" to keystroke \"k\" using command down'"
 
+# Manheim aliases
 alias ove='cd ~/work/ove'
 alias sim='cd ~/work/simulcast'
 alias dep='cd ~/work/simulcast_deployment'
 alias kiosk='cd ~/work/kiosk'
+
+alias rtfm='man'
