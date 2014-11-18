@@ -15,11 +15,11 @@ HISTFILE=~/.zsh_history
 
 source ~/.aliases
 source ~/mvnColor
-source ~/dotfiles/git_completions/git-prompt.sh
+source ~/.git_completions/git-prompt.sh
 source ~/.colors.zsh
 
-#fpath=(/usr/local/share/zsh-completions:~/dotfiles/git_completions/:$fpath)
-#fpath=(~/dotfiles/git_completions $fpath)
+#fpath=(/usr/local/share/zsh-completions:~/.git_completions/:$fpath)
+#fpath=(~/.git_completions $fpath)
 
 export LC_ALL=$LANG
 export TERM=xterm-256color
@@ -36,6 +36,7 @@ path=(/opt/local/bin /opt/local/sbin /usr/local/scala/bin /usr/local/heroku/bin 
 #if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 if command -v rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+bindkey '^[[3~' delete-char # make delete work
 bindkey -e  #emacs
 #bindkey -v  #viins
 #bindkey -a  #vicmd
@@ -66,10 +67,8 @@ autoload -U colors && colors # Enable colors in prompt
 autoload -U compinit # Command completion
 compinit
 
-zstyle ':completion:*:*:git:*' script ~/dotfiles/git_completions/git-completion.bash
+zstyle ':completion:*:*:git:*' script ~/.git_completions/git-completion.bash
 #zstyle '*' hosts $hosts
 
 autoload -U promptinit # Autoload prompts
 promptinit
-
-bindkey '^[[3~' delete-char # make delete work

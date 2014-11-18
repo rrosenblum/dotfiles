@@ -2,7 +2,7 @@
 
 dir=~/dotfiles
 #dotfiles="foo"
-dotfiles="aliases bash_profile bashrc gitconfig tmux.conf vim vimrc"
+dotfiles="aliases bash_profile bashrc gitconfig git_completions tmux.conf vim vimrc zshrc"
 
 for file in $dotfiles; do
   echo $file
