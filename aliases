@@ -4,10 +4,14 @@ alias bcap='bundle exec cap'
 
 alias cls="osascript -e 'if application \"Terminal\" is frontmost then tell application \"System Events\" to keystroke \"k\" using command down'"
 
+alias dotfiles='cd ~/dotfiles'
+
 # Manheim aliases
 alias ove='cd ~/work/ove'
 alias sim='cd ~/work/simulcast'
 alias dep='cd ~/work/simulcast_deployment'
 alias kiosk='cd ~/work/kiosk'
 
+# lolbash
 alias rtfm='man'
+alias tldr='less'
