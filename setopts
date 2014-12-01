@@ -1,12 +1,18 @@
+#!/usr/bin/env zsh
 setopt notify globdots correct pushdtohome cdablevars autolist
 setopt recexact longlistjobs
 setopt HIST_IGNORE_DUPS
 setopt prompt_subst # Enable parameter expansion, command substitution, and arithmetic expansion in the prompt
 setopt nohashdirs
 setopt no_beep # don't beep on error
-setopt auto_cd # If you type foo, and it isn't a command, and it is a directory in your cdpath, go there
 setopt pushd_ignore_dups # don't push multiple copies of the same directory onto the directory stack
 # setopt extended_glob # treat #, ~, and ^ as part of patterns for filename generation
+
+#unsetopt menu_complete
+#unsetopt flowcontrol
+setopt auto_menu
+#setopt complete_in_word
+#setopt always_to_end
 
 setopt append_history # Allow multiple terminal sessions to all append to one zsh command history
 setopt extended_history # save timestamp of command and duration
