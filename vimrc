@@ -92,8 +92,10 @@ let g:unite_split_rule = 'botright'
 let g:unite_source_grep_default_opts = '--exclude ''\.(git|svn|hg|bzr)'''
 let g:unite_source_grep_recursive_opt = '-R'
 
+let g:vimux_ruby_cmd_unit_test = "bundle exec ruby"
+
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
-map <LocalLeader>aw :Ack '<C-R><C-W>'
+map <LocalLeader>aw :Ag '<C-R><C-W>'
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nf :NERDTreeFind<CR>
 map <silent> <LocalLeader>ff :CtrlP<CR>
@@ -101,7 +103,7 @@ map <silent> <LocalLeader>fb :CtrlPBuffer<CR>
 map <silent> <LocalLeader>rt :!ctags -R --exclude=".git\|.svn\|log\|tmp\|db\|pkg" --extra=+f<CR>
 map <silent> <LocalLeader>rb :wa<CR> :RunAllRubyTests<CR>
 map <silent> <LocalLeader>rc :wa<CR> :RunRubyFocusedContext<CR>
-map <silent> <LocalLeader>rf :wa<CR> :RunRubyFocusedUnitTest<CR>
+map <silent> <LocalLeader>rf :wa<CR> :RunRubyFocusedTest<CR>
 map <silent> <LocalLeader>rs :!ruby -c %<CR>
 map <LocalLeader>rd Orequire 'ruby-debug';debugger<ESC>
 nnoremap <silent> <LocalLeader><CR> :tabe<CR>
@@ -112,6 +114,7 @@ nnoremap <silent> <LocalLeader>tb :Tagbar<cr>
 nnoremap <leader>uf :<C-u>Unite file_rec<CR>
 nnoremap <leader>af :<C-u>Unite file_rec/async:!<CR>
 nnoremap <silent> <leader>ub :<C-u>Unite buffer bookmark<CR>
+inoremap jj <ESC>
 
 " treat wrapped lines as their own lines
 nnoremap j gj
@@ -124,8 +127,16 @@ nnoremap <Down> gj
 nnoremap <Up> gk
 vnoremap <Down> gj
 vnoremap <Up> gk
-inoremap <Down> <C-o>gj
-inoremap <Up> <C-o>gk
+
+"select displayed lines using shift + home/end/arrow-keys
+noremap <buffer> <silent> <S-Home> vg<Home>o<S-Right>o
+noremap <buffer> <silent> <S-End> vg<End>
+noremap <buffer> <silent> <S-Up> vgk
+noremap <buffer> <silent> <S-Down> vgj
+inoremap <buffer> <silent> <S-Home> <C-o>vg<Home>o<S-Right>o
+inoremap <buffer> <silent> <S-End> <C-o>vg<End>
+inoremap <buffer> <silent> <S-Up> <C-o>vgk
+inoremap <buffer> <silent> <S-Down> <C-o>vgj
 
 " Highlight trailing whitespace
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
