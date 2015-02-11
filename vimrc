@@ -95,7 +95,7 @@ let g:unite_source_grep_recursive_opt = '-R'
 let g:vimux_ruby_cmd_unit_test = "bundle exec ruby"
 
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
-map <LocalLeader>aw :Ag '<C-R><C-W>'
+map <LocalLeader>aw :Ag! '<C-R><C-W>'
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nf :NERDTreeFind<CR>
 map <silent> <LocalLeader>ff :CtrlP<CR>
