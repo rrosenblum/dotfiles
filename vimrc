@@ -115,6 +115,7 @@ nnoremap <leader>uf :<C-u>Unite file_rec<CR>
 nnoremap <leader>af :<C-u>Unite file_rec/async:!<CR>
 nnoremap <silent> <leader>ub :<C-u>Unite buffer bookmark<CR>
 inoremap jj <ESC>
+inoremap <Tab> <C-p>
 
 " treat wrapped lines as their own lines
 nnoremap j gj
