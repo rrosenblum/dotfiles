@@ -29,7 +29,7 @@ set textwidth=0 nosmartindent tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 set notimeout
 set ttimeout
 set ttimeoutlen=10
-set wildmode=list:full
+set wildmode=list:longest
 
 set wildignore+=.hg,.git,.svn                    " Version control
 set wildignore+=*.aux,*.out,*.toc                " LaTeX intermediate files
