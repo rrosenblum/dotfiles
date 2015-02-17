@@ -3,7 +3,7 @@ alias b='bundle exec'
 alias brake='bundle exec rake'
 alias bcap='bundle exec cap'
 
-alias cls="osascript -e 'if application \"Terminal\" is frontmost then tell application \"System Events\" to keystroke \"k\" using command down'"
+alias cls="clear && printf '\e[3J'"
 
 alias dotfiles='cd ~/dotfiles'
 
