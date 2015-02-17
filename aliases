@@ -1,7 +1,7 @@
 alias be='bundle exec'
 alias b='bundle exec'
-alias brake='bundle exec rake'
-alias bcap='bundle exec cap'
+alias brake='noglob bundle exec rake'
+alias bcap='noglob bundle exec cap'
 
 alias cls="clear && printf '\e[3J'"
 
