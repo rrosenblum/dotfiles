@@ -75,6 +75,7 @@ let g:ack_default_options = ' -s -H --nocolor --nogroup --column --ignore-dir=tm
 let g:aghighlight=1
 
 let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_dont_split = 'NERD_tree_2'
 let g:ctrlp_max_files = 0
 let g:ctrlp_lazy_update = 100
 let g:ctrlp_custom_ignore = {
@@ -115,7 +116,7 @@ nnoremap <leader>uf :<C-u>Unite file_rec<CR>
 nnoremap <leader>af :<C-u>Unite file_rec/async:!<CR>
 nnoremap <silent> <leader>ub :<C-u>Unite buffer bookmark<CR>
 inoremap jj <ESC>
-inoremap <Tab> <C-p>
+"inoremap <Tab> <C-p>
 
 " treat wrapped lines as their own lines
 nnoremap j gj
