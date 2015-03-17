@@ -16,9 +16,7 @@ HISTFILE=~/.zsh_history
 
 source ~/.setopts
 source ~/.aliases
-source ~/mvnColor
 source ~/.git_completions/git-prompt.sh
-source ~/.colors.zsh
 
 #fpath=(/usr/local/share/zsh-completions:~/.git_completions/:$fpath)
 fpath=(~/.git_completions $fpath)
