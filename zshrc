@@ -24,6 +24,7 @@ fpath=(~/.git_completions $fpath)
 export LC_ALL=$LANG
 export TERM=xterm-256color
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home
+GIT_PS1_SHOWUPSTREAM=(verbose)
 export PROMPT='%n@%m:%~$(__git_ps1 " (%s)")\$ '
 export CLICOLOR=1
 export GREP_OPTIONS='--color=auto'
@@ -37,8 +38,8 @@ path=(/opt/local/bin /opt/local/sbin /usr/local/scala/bin /usr/local/heroku/bin 
 #if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 if command -v rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-bindkey '^[[3~' delete-char # make delete work
 bindkey -e  #emacs
+bindkey "^[[3~" delete-char
 #bindkey -v  #viins
 #bindkey -a  #vicmd
 
