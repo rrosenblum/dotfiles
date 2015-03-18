@@ -82,6 +82,8 @@ let g:ctrlp_custom_ignore = {
     \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.idea$',
     \ 'file': '\.pyc$\|\.pyo$\|\.rbc$|\.rbo$\|\.class$\|\.o$\|\~$\',
     \ }
+let g:ctrlp_use_caching = 0
+let g:ctrlp_user_command = 'ag %s --files-with-matches -g ""'
 
 let NERDTreeShowHidden=1
 
