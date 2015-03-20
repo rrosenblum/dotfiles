@@ -30,10 +30,8 @@ export CLICOLOR=1
 export GREP_OPTIONS='--color=auto'
 export EDITOR=vim
 
-# MacPorts Installer addition on 2012-12-13_at_20:59:13: adding an appropriate PATH variable for use with MacPorts.
 #export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/scala/bin:/usr/local/heroku/bin:$PATH
 path=(/opt/local/bin /opt/local/sbin /usr/local/scala/bin /usr/local/heroku/bin $path)
-# Finished adapting your PATH environment variable for use with MacPorts.
 
 #if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 if command -v rbenv > /dev/null; then eval "$(rbenv init -)"; fi
