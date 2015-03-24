@@ -13,6 +13,7 @@ filetype plugin indent on
 compiler ruby
 colorscheme slate
 
+set autoread
 set backspace=indent,eol,start
 set dir=/tmp//
 set hlsearch
