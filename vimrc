@@ -156,6 +156,8 @@ highlight SignifySignAdd    cterm=bold ctermfg=119
 highlight SignifySignDelete cterm=bold ctermfg=167
 highlight SignifySignChange cterm=bold ctermfg=227
 
+autocmd FocusLost * stopinsert
+
 function! ToggleRelativeNumber()
   if &relativenumber
     set number
