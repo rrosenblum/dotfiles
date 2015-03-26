@@ -20,6 +20,7 @@ set hlsearch
 set incsearch
 set ignorecase
 set laststatus=2
+set linebreak
 set nocompatible
 set noshowmode
 set nu
