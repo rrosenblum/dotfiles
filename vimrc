@@ -158,6 +158,7 @@ highlight SignifySignDelete cterm=bold ctermfg=167
 highlight SignifySignChange cterm=bold ctermfg=227
 
 autocmd FocusLost * stopinsert
+autocmd VimResized * :wincmd = " auto resize vim when the window is resized
 
 function! ToggleRelativeNumber()
   if &relativenumber
