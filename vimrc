@@ -75,6 +75,7 @@ let g:ackprg = 'ack'
 let g:ack_default_options = ' -s -H --nocolor --nogroup --column --ignore-dir=tmp --ignore-dir=.git --ignore-dir=.idea'
 
 let g:aghighlight=1
+let g:ag_prg="ag --vimgrep --column --nogroup --noheading"
 
 let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_dont_split = 'NERD_tree_2'
