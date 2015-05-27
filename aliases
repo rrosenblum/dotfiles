@@ -16,3 +16,5 @@ alias kiosk='cd ~/work/kiosk'
 # lolbash
 alias rtfm='man'
 alias tldr='less'
+alias nyan='telnet nyancat.dakko.us'
+alias star_wars='telnet towel.blinkenlights.nl'
