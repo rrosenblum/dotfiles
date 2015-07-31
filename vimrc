@@ -113,6 +113,7 @@ map <silent> <LocalLeader>rc :wa<CR> :RunRubyFocusedContext<CR>
 map <silent> <LocalLeader>rf :wa<CR> :RunRubyFocusedTest<CR>
 map <silent> <LocalLeader>rl :wa<CR> :VimuxRunLastCommand<CR>
 map <silent> <LocalLeader>rs :!ruby -c %<CR>
+map <silent> <LocalLeader>yr :YRShow<CR>
 map <LocalLeader>rd Orequire 'ruby-debug';debugger<ESC>
 nnoremap <silent> <LocalLeader><CR> :tabe<CR>
 nnoremap <silent> <LocalLeader>[ :tabp<CR>
