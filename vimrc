@@ -99,6 +99,8 @@ let g:unite_split_rule = 'botright'
 let g:unite_source_grep_default_opts = '--exclude ''\.(git|svn|hg|bzr)'''
 let g:unite_source_grep_recursive_opt = '-R'
 
+let g:vimux_ruby_cmd_all_tests = "bundle exec ruby"
+let g:vimux_ruby_cmd_context = "bundle exec ruby"
 let g:vimux_ruby_cmd_unit_test = "bundle exec ruby"
 
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
