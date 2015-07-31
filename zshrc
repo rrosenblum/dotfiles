@@ -31,7 +31,7 @@ export GREP_OPTIONS='--color=auto'
 export EDITOR=vim
 
 #export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/scala/bin:/usr/local/heroku/bin:$PATH
-path=(/opt/local/bin /opt/local/sbin /usr/local/scala/bin /usr/local/heroku/bin $path)
+path=(/usr/local/sbin /opt/local/bin /opt/local/sbin /usr/local/scala/bin /usr/local/heroku/bin $path)
 
 #if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 if command -v rbenv > /dev/null; then eval "$(rbenv init -)"; fi
