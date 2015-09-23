@@ -52,3 +52,6 @@
 [submodule "vim/bundle/YankRing.vim"]
 	path = vim/bundle/YankRing.vim
 	url = git@github.com:vim-scripts/YankRing.vim.git
+[submodule "vim/bundle/vim-rubocop"]
+	path = vim/bundle/vim-rubocop
+	url = git@github.com:ngmy/vim-rubocop.git

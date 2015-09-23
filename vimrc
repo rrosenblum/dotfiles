@@ -90,6 +90,8 @@ let g:ctrlp_user_command = 'ag %s --files-with-matches -g ""'
 
 let NERDTreeShowHidden=1
 
+let g:vimrubocop_rubocop_cmd = 'bundle exec rubocop'
+
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
