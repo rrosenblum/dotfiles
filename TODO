@@ -1,0 +1,3 @@
+install brew
+install powerline
+make sure things work cross platform (mac, linux, cygwin)
