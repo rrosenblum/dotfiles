@@ -13,3 +13,9 @@ default_command_set = Pry::CommandSet.new do
     end
   end
 end
+
+Pry::Commands.create_command 'clear', 'clear the screen', :shellwords => false do
+  def process
+    system 'clear'
+  end
+end
