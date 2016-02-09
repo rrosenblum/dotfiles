@@ -27,6 +27,7 @@ set number
 set pastetoggle=<F2>
 set scrolloff=5
 set smartcase
+set synmaxcol=250
 set textwidth=0 nosmartindent tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 set notimeout
 set ttimeout
