@@ -15,23 +15,28 @@ colorscheme slate
 
 set autoread
 set backspace=indent,eol,start
+set backup                        " enable backups
+set backupdir=~/.vim/tmp/backup// " backups
 set dir=/tmp//
+set directory=~/.vim/tmp/swap//   " swap files
 set hlsearch
-set incsearch
 set ignorecase
+set incsearch
 set laststatus=2
 set linebreak
 set nocompatible
 set noshowmode
+set noswapfile                    " it's 2013, Vim.
+set notimeout
 set number
 set pastetoggle=<F2>
 set scrolloff=5
 set smartcase
 set synmaxcol=250
 set textwidth=0 nosmartindent tabstop=2 shiftwidth=2 softtabstop=2 expandtab
-set notimeout
 set ttimeout
 set ttimeoutlen=10
+set undodir=~/.vim/tmp/undo//     " undo files
 set wildmode=list:longest
 
 set wildignore+=.hg,.git,.svn                    " Version control
@@ -44,13 +49,6 @@ set wildignore+=*.DS_Store                       " OSX bullshit
 set wildignore+=*.luac                           " Lua byte code
 set wildignore+=migrations                       " Django migrations
 set wildignore+=*.pyc                            " Python byte code
-
-set backup                        " enable backups
-set noswapfile                    " it's 2013, Vim.
-
-set undodir=~/.vim/tmp/undo//     " undo files
-set backupdir=~/.vim/tmp/backup// " backups
-set directory=~/.vim/tmp/swap//   " swap files
 
 " Make those folders automatically if they don't already exist.
 if !isdirectory(expand(&undodir))
