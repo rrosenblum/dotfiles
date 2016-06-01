@@ -19,3 +19,7 @@ Pry::Commands.create_command 'clear', 'clear the screen', :shellwords => false d
     system 'clear'
   end
 end
+
+def own_methods(object)
+  (object.methods - Object.methods).sort
+end
