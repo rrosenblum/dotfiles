@@ -70,11 +70,10 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme = 'simple'
 
 let g:ackhighlight = 1
-let g:ackprg = 'ack'
 let g:ack_default_options = ' -s -H --nocolor --nogroup --column --ignore-dir=tmp --ignore-dir=.git --ignore-dir=.idea'
-
-let g:ag_highlight=1
-let g:ag_prg="ag --vimgrep --column --nogroup --noheading"
+if executable('ag')
+  let g:ackprg = "ag --vimgrep --column --nogroup --noheading"
+endif
 
 let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_dont_split = 'NERD_tree_2'
@@ -105,7 +104,7 @@ let g:vimux_ruby_cmd_context = "bundle exec ruby"
 let g:vimux_ruby_cmd_unit_test = "bundle exec ruby"
 
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
-map <LocalLeader>aw :Ag! '<C-R><C-W>'
+map <LocalLeader>aw :Ack! '<C-R><C-W>'
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nf :NERDTreeFind<CR>
 map <silent> <LocalLeader>ff :CtrlP<CR>
@@ -128,6 +127,9 @@ nnoremap <leader>af :<C-u>Unite file_rec/async:!<CR>
 nnoremap <silent> <leader>ub :<C-u>Unite buffer bookmark<CR>
 inoremap jj <ESC>
 "inoremap <Tab> <C-p>
+
+" Change Ag to Ack
+cnoreabbrev Ag Ack
 
 " treat wrapped lines as their own lines
 nnoremap j gj
