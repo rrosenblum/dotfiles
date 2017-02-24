@@ -153,6 +153,7 @@ inoremap <buffer> <silent> <S-End> <C-o>vg<End>
 inoremap <buffer> <silent> <S-Up> <C-o>vgk
 inoremap <buffer> <silent> <S-Down> <C-o>vgj
 
+autocmd BufNewFile,BufRead *.json set ft=javascript
 " Highlight trailing whitespace
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
