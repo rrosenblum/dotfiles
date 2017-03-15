@@ -30,11 +30,13 @@ export CLICOLOR=1
 export GREP_OPTIONS='--color=auto'
 export EDITOR=vim
 
-#export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/scala/bin:/usr/local/heroku/bin:$PATH
-path=(/usr/local/sbin /opt/local/bin /opt/local/sbin /usr/local/scala/bin /usr/local/heroku/bin $path)
+if [ !is_mac ]; then
+  #export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/scala/bin:/usr/local/heroku/bin:$PATH
+  path=(/usr/local/sbin /opt/local/bin /opt/local/sbin /usr/local/scala/bin $path)
 
-#if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-if command -v rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+  #if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+  if command -v rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+fi
 
 bindkey -e  #emacs
 bindkey "^[[3~" delete-char
