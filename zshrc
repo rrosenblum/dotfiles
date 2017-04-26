@@ -22,7 +22,7 @@ source ~/.git_completions/git-prompt.sh
 fpath=(~/.git_completions $fpath)
 
 export LC_ALL=$LANG
-export TERM=xterm-256color
+export TERM=screen-256color
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home
 GIT_PS1_SHOWUPSTREAM=(verbose)
 export PROMPT='%n@%m:%~$(__git_ps1 " (%s)")\$ '
