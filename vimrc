@@ -171,7 +171,7 @@ autocmd VimResized * :wincmd = " auto resize vim when the window is resized
 
 function! ToggleRelativeNumber()
   if &relativenumber
-    set number
+    set norelativenumber
   else
     set relativenumber
   endif
