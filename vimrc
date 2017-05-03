@@ -103,6 +103,8 @@ let g:vimux_ruby_cmd_all_tests = "bundle exec ruby"
 let g:vimux_ruby_cmd_context = "bundle exec ruby"
 let g:vimux_ruby_cmd_unit_test = "bundle exec ruby"
 
+let test#strategy = 'vimux'
+
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 map <LocalLeader>aw :Ack! '<C-R><C-W>'
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
@@ -114,6 +116,10 @@ map <silent> <LocalLeader>rb :wa<CR> :RunAllRubyTests<CR>
 map <silent> <LocalLeader>rc :wa<CR> :RunRubyFocusedContext<CR>
 map <silent> <LocalLeader>rf :wa<CR> :RunRubyFocusedTest<CR>
 map <silent> <LocalLeader>rl :wa<CR> :VimuxRunLastCommand<CR>
+map <silent> <LocalLeader>tn :wa<CR> :TestNearest<CR>
+map <silent> <LocalLeader>tl :wa<CR> :TestLast<CR>
+map <silent> <LocalLeader>tf :wa<CR> :TestFile<CR>
+map <silent> <LocalLeader>tv :wa<CR> :TestVisit<CR>
 map <silent> <LocalLeader>rs :!ruby -c %<CR>
 map <silent> <LocalLeader>yr :YRShow<CR>
 map <LocalLeader>rd Orequire 'ruby-debug';debugger<ESC>
