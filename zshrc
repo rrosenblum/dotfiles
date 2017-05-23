@@ -29,6 +29,10 @@ export PROMPT='%n@%m:%~$(__git_ps1 " (%s)")\$ '
 export CLICOLOR=1
 export GREP_OPTIONS='--color=auto'
 export EDITOR=vim
+# https://unix.stackexchange.com/questions/179173/make-less-highlight-search-patterns-instead-of-italicizing-them
+export LESS_TERMCAP_so=$'\E[30;43m'
+export LESS_TERMCAP_se=$'\E[39;49m'
+
 
 if [ !is_mac ]; then
   #export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/scala/bin:/usr/local/heroku/bin:$PATH
