@@ -76,3 +76,6 @@
 [submodule "vim/bundle/vim-searchindex"]
 	path = vim/bundle/vim-searchindex
 	url = https://github.com/google/vim-searchindex.git
+[submodule "vim/bundle/vim-puppet"]
+	path = vim/bundle/vim-puppet
+	url = https://github.com/rodjek/vim-puppet.git
