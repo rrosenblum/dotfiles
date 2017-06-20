@@ -2,6 +2,7 @@ alias be='bundle exec'
 alias b='bundle exec'
 alias brake='noglob bundle exec rake'
 alias bcap='noglob bundle exec cap'
+alias vi=nvim
 
 alias cls="clear && printf '\e[3J'"
 

@@ -28,7 +28,7 @@ GIT_PS1_SHOWUPSTREAM=(verbose)
 export PROMPT='%n@%m:%~$(__git_ps1 " (%s)")\$ '
 export CLICOLOR=1
 export GREP_OPTIONS='--color=auto'
-export EDITOR=vim
+export EDITOR=nvim
 # https://unix.stackexchange.com/questions/179173/make-less-highlight-search-patterns-instead-of-italicizing-them
 export LESS_TERMCAP_so=$'\E[30;43m'
 export LESS_TERMCAP_se=$'\E[39;49m'
