@@ -42,7 +42,7 @@
 	url = https://github.com/mhinz/vim-signify.git
 [submodule "vim/bundle/vimux"]
 	path = vim/bundle/vimux
-	url = https://github.com/benmills/vimux
+	url = https://github.com/benmills/vimux.git
 [submodule "vim/bundle/vimux-ruby-test"]
 	path = vim/bundle/vimux-ruby-test
 	url = https://github.com/pgr0ss/vimux-ruby-test.git
