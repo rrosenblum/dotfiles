@@ -1,0 +1,33 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- shell:
+  - git submodule update --init --recursive
+
+- link:
+    ~/.ackrc:
+      path: ackrc
+    ~/.aliases:
+      path: aliases
+    ~/.config/nvim/init.vim:
+      create: true
+      force: true
+      path: init.vim
+    ~/.gitconfig:
+      path: gitconfig
+    ~/.git_completions:
+      path: git_completions
+    ~/.pryrc:
+      path: pryrc
+    ~/.tmux.conf:
+      path: tmux.conf
+    ~/.vim:
+      force: true
+      path: vim
+    ~/.vimrc:
+      path: vimrc
+    ~/.zshrc:
+      path: zshrc
