@@ -1,0 +1,13 @@
+--type-add
+ruby=.rake
+--type-set=html=.html.erb
+--type-set=haml=.haml
+--type-set=conf=.conf
+--type-set=coffee=.coffee
+--type-set=mustache=.mustache
+--type-set=ejs=.ejs
+--type-set=puppet=.pp
+--type-set=scss=.scss
+--ignore-file=is:tags
+--ignore-file=is:.tags
+--ignore-file=is:.tags_sorted_by_file
