@@ -26,6 +26,8 @@
   conflictstyle = diff3
 [push]
 	default = simple
+[rebase]
+  autostash = true
 [user]
 	name = Ryan Rosenblum
 	email = ryan.rosenblum@gmail.com
