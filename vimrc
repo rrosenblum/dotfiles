@@ -30,6 +30,7 @@ set noswapfile                    " it's 2013, Vim.
 set notimeout
 set number
 set pastetoggle=<F2>
+set rtp+=/usr/local/opt/fzf
 set scrolloff=5
 set smartcase
 set synmaxcol=250
@@ -120,9 +121,7 @@ map <silent> <LocalLeader>tn :wa<CR> :TestNearest<CR>
 map <silent> <LocalLeader>tl :wa<CR> :TestLast<CR>
 map <silent> <LocalLeader>tf :wa<CR> :TestFile<CR>
 map <silent> <LocalLeader>tv :wa<CR> :TestVisit<CR>
-map <silent> <LocalLeader>rs :!ruby -c %<CR>
 map <silent> <LocalLeader>yr :YRShow<CR>
-map <LocalLeader>rd Orequire 'ruby-debug';debugger<ESC>
 nnoremap <silent> <LocalLeader><CR> :tabe<CR>
 nnoremap <silent> <LocalLeader>[ :tabp<CR>
 nnoremap <silent> <LocalLeader>] :tabn<CR>
