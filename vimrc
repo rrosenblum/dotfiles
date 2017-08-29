@@ -131,6 +131,8 @@ nnoremap <leader>uf :<C-u>Unite file_rec<CR>
 nnoremap <leader>af :<C-u>Unite file_rec/async:!<CR>
 nnoremap <silent> <leader>ub :<C-u>Unite buffer bookmark<CR>
 inoremap jj <ESC>
+" Read a pdf as text
+:command! -complete=file -nargs=1 Rpdf :r !pdftotext -nopgbrk <q-args> -
 "inoremap <Tab> <C-p>
 
 " Change Ag to Ack
