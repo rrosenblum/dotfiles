@@ -125,7 +125,7 @@ map <silent> <LocalLeader>yr :YRShow<CR>
 nnoremap <silent> <LocalLeader><CR> :tabe<CR>
 nnoremap <silent> <LocalLeader>[ :tabp<CR>
 nnoremap <silent> <LocalLeader>] :tabn<CR>
-nnoremap <silent> <LocalLeader>rr :call ToggleRelativeNumber()<cr>
+nnoremap <silent> <LocalLeader>rr :set relativenumber!<cr>
 nnoremap <silent> <LocalLeader>tb :Tagbar<cr>
 nnoremap <leader>uf :<C-u>Unite file_rec<CR>
 nnoremap <leader>af :<C-u>Unite file_rec/async:!<CR>
@@ -175,14 +175,6 @@ highlight SignifySignChange cterm=bold ctermfg=227
 
 autocmd FocusLost * stopinsert
 autocmd VimResized * :wincmd = " auto resize vim when the window is resized
-
-function! ToggleRelativeNumber()
-  if &relativenumber
-    set norelativenumber
-  else
-    set relativenumber
-  endif
-endfunction
 
 function! WrapForTmux(s)
   if !exists('$TMUX')
