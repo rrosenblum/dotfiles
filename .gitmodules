@@ -21,7 +21,7 @@
 	url = https://github.com/Shougo/unite.vim.git
 [submodule "vim/bundle/javascript-libraries-syntax.vim"]
 	path = vim/bundle/javascript-libraries-syntax.vim
-	url = git@github.com:othree/javascript-libraries-syntax.vim.git
+	url = https://github.com/othree/javascript-libraries-syntax.vim.git
 [submodule "vim/bundle/vim-airline"]
 	path = vim/bundle/vim-airline
 	url = https://github.com/bling/vim-airline.git
@@ -51,10 +51,10 @@
 	url = https://github.com/tmux-plugins/vim-tmux-focus-events.git
 [submodule "vim/bundle/YankRing.vim"]
 	path = vim/bundle/YankRing.vim
-	url = git@github.com:vim-scripts/YankRing.vim.git
+	url = https://github.com/vim-scripts/YankRing.vim.git
 [submodule "vim/bundle/vim-rubocop"]
 	path = vim/bundle/vim-rubocop
-	url = git@github.com:ngmy/vim-rubocop.git
+	url = https://github.com/ngmy/vim-rubocop.git
 [submodule "vim/bundle/fzf.vim"]
 	path = vim/bundle/fzf.vim
 	url = https://github.com/junegunn/fzf.vim.git
@@ -69,10 +69,10 @@
 	url = https://github.com/tpope/vim-bundler.git
 [submodule "vim/bundle/vim-airline-themes"]
 	path = vim/bundle/vim-airline-themes
-	url = git@github.com:vim-airline/vim-airline-themes.git
+	url = https://github.com/vim-airline/vim-airline-themes.git
 [submodule "vim/bundle/vim-test"]
 	path = vim/bundle/vim-test
-	url = git@github.com:janko-m/vim-test.git
+	url = https://github.com/janko-m/vim-test.git
 [submodule "vim/bundle/vim-searchindex"]
 	path = vim/bundle/vim-searchindex
 	url = https://github.com/google/vim-searchindex.git
