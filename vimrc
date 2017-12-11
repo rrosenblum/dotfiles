@@ -1,5 +1,34 @@
-execute pathogen#infect()
-execute pathogen#helptags()
+call plug#begin('~/.local/share/nvim/plugged')
+Plug 'scrooloose/nerdtree'
+Plug 'mileszs/ack.vim'
+Plug 'rking/ag.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'scrooloose/syntastic'
+Plug 'majutsushi/tagbar'
+Plug 'Shougo/unite.vim'
+Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'bling/vim-airline'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-haml'
+Plug 'pangloss/vim-javascript'
+Plug 'mhinz/vim-signify'
+Plug 'benmills/vimux'
+Plug 'pgr0ss/vimux-ruby-test'
+Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'vim-scripts/YankRing.vim'
+Plug 'ngmy/vim-rubocop'
+Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-rails'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-bundler'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'janko-m/vim-test'
+Plug 'google/vim-searchindex'
+Plug 'rodjek/vim-puppet'
+Plug 'anishathalye/dotbot'
+Plug 'JamshedVesuna/vim-markdown-preview'
+call plug#end()
 
 "python from powerline.vim import setup as powerline_setup
 "python powerline_setup()
