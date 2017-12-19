@@ -28,6 +28,7 @@ Plug 'google/vim-searchindex'
 Plug 'rodjek/vim-puppet'
 Plug 'anishathalye/dotbot'
 Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'haya14busa/incsearch.vim'
 call plug#end()
 
 "python from powerline.vim import setup as powerline_setup
@@ -136,6 +137,11 @@ let g:vimux_ruby_cmd_unit_test = "bundle exec ruby"
 let test#strategy = 'vimux'
 
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
+" incsearch mappings
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+
 map <LocalLeader>aw :Ack! '<C-R><C-W>'
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nf :NERDTreeFind<CR>
