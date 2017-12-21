@@ -5,6 +5,7 @@ alias bcap='noglob bundle exec cap'
 alias vi=nvim
 
 alias cls="clear && printf '\e[3J'"
+alias grep='grep --color=always'
 
 alias dotfiles='cd ~/dotfiles'
 

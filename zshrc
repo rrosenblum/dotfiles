@@ -27,7 +27,6 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home
 GIT_PS1_SHOWUPSTREAM=(verbose)
 export PROMPT='%n@%m:%~$(__git_ps1 " (%s)")\$ '
 export CLICOLOR=1
-export GREP_OPTIONS='--color=auto'
 export EDITOR=nvim
 # https://unix.stackexchange.com/questions/179173/make-less-highlight-search-patterns-instead-of-italicizing-them
 export LESS_TERMCAP_so=$'\E[30;43m'
