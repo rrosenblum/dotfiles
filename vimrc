@@ -29,6 +29,7 @@ Plug 'anishathalye/dotbot'
 Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'haya14busa/incsearch.vim'
 Plug 'w0rp/ale'
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 "python from powerline.vim import setup as powerline_setup
@@ -119,6 +120,8 @@ let g:ctrlp_custom_ignore = {
     \ }
 let g:ctrlp_use_caching = 0
 let g:ctrlp_user_command = 'ag %s --files-with-matches -g ""'
+
+let g:fzf_layout = { 'down': '~25%' }
 
 let NERDTreeShowHidden=1
 
