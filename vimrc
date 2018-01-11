@@ -30,6 +30,8 @@ Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'haya14busa/incsearch.vim'
 Plug 'w0rp/ale'
 Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 call plug#end()
 
 "python from powerline.vim import setup as powerline_setup
