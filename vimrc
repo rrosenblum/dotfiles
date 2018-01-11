@@ -3,7 +3,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'mileszs/ack.vim'
 Plug 'rking/ag.vim'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'scrooloose/syntastic'
 Plug 'majutsushi/tagbar'
 Plug 'Shougo/unite.vim'
 Plug 'othree/javascript-libraries-syntax.vim'
@@ -29,6 +28,7 @@ Plug 'rodjek/vim-puppet'
 Plug 'anishathalye/dotbot'
 Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'haya14busa/incsearch.vim'
+Plug 'w0rp/ale'
 call plug#end()
 
 "python from powerline.vim import setup as powerline_setup
@@ -95,10 +95,13 @@ endif
 " Highlight VCS conflict markers
 match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
 
+let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#tab_nr_type = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'simple'
+
+let g:ale_lint_delay = 1000
 
 let g:ackhighlight = 1
 let g:ack_default_options = ' -s -H --nocolor --nogroup --column --ignore-dir=tmp --ignore-dir=.git --ignore-dir=.idea'
@@ -120,9 +123,6 @@ let g:ctrlp_user_command = 'ag %s --files-with-matches -g ""'
 let NERDTreeShowHidden=1
 
 let g:vimrubocop_rubocop_cmd = 'bundle exec rubocop'
-
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
 
 let g:unite_enable_start_insert = 1
 let g:unite_winheight = 10
