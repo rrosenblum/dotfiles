@@ -6,17 +6,17 @@ end
 
 Pry.config.color = true
 
-default_command_set = Pry::CommandSet.new do
-  command "sql", "Send sql over AR." do |query|
-    if ENV['RAILS_ENV'] || defined?(Rails)
-      pp ActiveRecord::Base.connection.select_all(query)
+Pry::Commands.create_command('sql', 'Send sql over AR.', :sellwords => false) do
+  def process(query)
+    if defined?(ActiveRecord)
+      puts ActiveRecord::Base.connection.select_all(query)
     else
-      pp "No rails env defined"
+      puts 'ActiveRecord is not defined'
     end
   end
 end
 
-Pry::Commands.create_command 'clear', 'clear the screen', :shellwords => false do
+Pry::Commands.create_command('clear', 'clear the screen', :shellwords => false) do
   def process
     system 'clear'
   end
