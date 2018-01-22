@@ -1,7 +1,6 @@
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'mileszs/ack.vim'
-Plug 'rking/ag.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'majutsushi/tagbar'
 Plug 'Shougo/unite.vim'
@@ -13,11 +12,9 @@ Plug 'tpope/vim-haml'
 Plug 'pangloss/vim-javascript'
 Plug 'mhinz/vim-signify'
 Plug 'benmills/vimux'
-Plug 'pgr0ss/vimux-ruby-test'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'vim-scripts/YankRing.vim'
 Plug 'ngmy/vim-rubocop'
-Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-bundler'
@@ -25,7 +22,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'janko-m/vim-test'
 Plug 'google/vim-searchindex'
 Plug 'rodjek/vim-puppet'
-Plug 'anishathalye/dotbot'
 Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'haya14busa/incsearch.vim'
 Plug 'w0rp/ale'
@@ -134,10 +130,6 @@ let g:unite_winheight = 10
 let g:unite_split_rule = 'botright'
 let g:unite_source_grep_default_opts = '--exclude ''\.(git|svn|hg|bzr)'''
 let g:unite_source_grep_recursive_opt = '-R'
-
-let g:vimux_ruby_cmd_all_tests = "bundle exec ruby"
-let g:vimux_ruby_cmd_context = "bundle exec ruby"
-let g:vimux_ruby_cmd_unit_test = "bundle exec ruby"
 
 let test#strategy = 'vimux'
 
@@ -250,7 +242,6 @@ function! NyanMe()
     hi NyanRainbow5        guifg=#fc9d00
     hi NyanRainbow6        guifg=#fe0000
 
-
     echohl NyanRainbow1
     echon "≈"
     echohl NyanRainbow2
@@ -353,4 +344,3 @@ function! NyanMe()
     redraw
 endfunction
 command! NyanMe call NyanMe()
-
