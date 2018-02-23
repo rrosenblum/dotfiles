@@ -5,7 +5,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'majutsushi/tagbar'
 Plug 'Shougo/unite.vim'
-Plug 'junegunn/fzf.vim'
 
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'tpope/vim-haml'
