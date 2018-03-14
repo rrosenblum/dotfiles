@@ -36,7 +36,9 @@ if [ !is_mac ]; then
   if command -v rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 fi
 
-bindkey -e  #emacs
+bindkey -e # emacs
+# bindkey -v # vi
+# set editing-mode vi
 bindkey "^[[3~" delete-char
 #bindkey -v  #viins
 #bindkey -a  #vicmd
