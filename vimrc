@@ -125,6 +125,7 @@ let g:ctrlp_user_command = 'ag %s --files-with-matches -g ""'
 let g:fzf_layout = { 'down': '~25%' }
 
 let NERDTreeShowHidden=1
+let NERDTreeAutoDeleteBuffer=1
 
 let g:vimrubocop_rubocop_cmd = 'bundle exec rubocop'
 
