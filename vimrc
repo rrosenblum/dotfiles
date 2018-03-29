@@ -149,9 +149,6 @@ map <silent> <LocalLeader>nf :NERDTreeFind<CR>
 map <silent> <LocalLeader>ff :CtrlP<CR>
 map <silent> <LocalLeader>fb :CtrlPBuffer<CR>
 map <silent> <LocalLeader>rt :!ctags -R --exclude=".git\|.svn\|log\|tmp\|db\|pkg" --extra=+f<CR>
-map <silent> <LocalLeader>rb :wa<CR> :RunAllRubyTests<CR>
-map <silent> <LocalLeader>rc :wa<CR> :RunRubyFocusedContext<CR>
-map <silent> <LocalLeader>rf :wa<CR> :RunRubyFocusedTest<CR>
 map <silent> <LocalLeader>rl :wa<CR> :VimuxRunLastCommand<CR>
 map <silent> <LocalLeader>ra :RuboCop -a<CR>
 map <silent> <LocalLeader>tn :wa<CR> :TestNearest<CR>
