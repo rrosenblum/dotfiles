@@ -153,6 +153,7 @@ map <silent> <LocalLeader>rb :wa<CR> :RunAllRubyTests<CR>
 map <silent> <LocalLeader>rc :wa<CR> :RunRubyFocusedContext<CR>
 map <silent> <LocalLeader>rf :wa<CR> :RunRubyFocusedTest<CR>
 map <silent> <LocalLeader>rl :wa<CR> :VimuxRunLastCommand<CR>
+map <silent> <LocalLeader>ra :RuboCop -a<CR>
 map <silent> <LocalLeader>tn :wa<CR> :TestNearest<CR>
 map <silent> <LocalLeader>tl :wa<CR> :TestLast<CR>
 map <silent> <LocalLeader>tf :wa<CR> :TestFile<CR>
