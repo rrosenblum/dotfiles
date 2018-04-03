@@ -113,7 +113,7 @@ if executable('ag')
 endif
 
 let g:ctrlp_clear_cache_on_exit = 0
-let g:ctrlp_dont_split = 'NERD_tree_2'
+let g:ctrlp_reuse_window = 'netrw\|NERDTree'
 let g:ctrlp_max_files = 0
 let g:ctrlp_lazy_update = 100
 let g:ctrlp_custom_ignore = {
