@@ -31,7 +31,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 
 Plug 'JamshedVesuna/vim-markdown-preview'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --js-completer' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --js-completer' }
 call plug#end()
 
 "python from powerline.vim import setup as powerline_setup
