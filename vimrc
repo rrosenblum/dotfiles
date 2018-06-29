@@ -128,6 +128,8 @@ let g:fzf_layout = { 'down': '~25%' }
 let NERDTreeShowHidden=1
 let NERDTreeAutoDeleteBuffer=1
 
+let g:ruby_indent_block_style = 'do'
+
 let g:vimrubocop_rubocop_cmd = 'bundle exec rubocop'
 
 let g:unite_enable_start_insert = 1
