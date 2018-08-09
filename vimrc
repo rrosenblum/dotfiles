@@ -18,6 +18,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'w0rp/ale'
 Plug 'janko-m/vim-test'
 Plug 'mhinz/vim-signify'
+Plug 'RRethy/vim-illuminate'
 
 Plug 'benmills/vimux'
 Plug 'tmux-plugins/vim-tmux-focus-events'
@@ -124,6 +125,16 @@ let g:ctrlp_use_caching = 0
 let g:ctrlp_user_command = 'ag %s --files-with-matches -g ""'
 
 let g:fzf_layout = { 'down': '~25%' }
+
+" use `echo synIDattr(synIDtrans(synID(line("."), col("."), 1)), "name")` to
+" determine the highlight-group of the word under the cursor
+let g:Illuminate_ftHighlightGroups = {
+      \ 'vim': ['vimVar', 'vimString', 'vimLineComment',
+      \         'vimFuncName', 'vimFunction', 'vimUserFunc', 'vimFunc'],
+      \ 'ruby': ['Constant', 'Define', 'Function', 'PreProc',
+      \          'rubyArrayLiteral', 'rubyBlock', 'rubyConditionalExpression',
+      \           'rubyCurlyBlock', 'rubyDoBlock', 'rubyMethodBlock', 'Type']
+      \ }
 
 let NERDTreeShowHidden=1
 let NERDTreeAutoDeleteBuffer=1
