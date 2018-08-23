@@ -106,6 +106,7 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme = 'simple'
 
 let g:ale_lint_delay = 1000
+let g:ale_ruby_rubocop_executable = 'bundle'
 
 let g:ackhighlight = 1
 let g:ack_default_options = ' -s -H --nocolor --nogroup --column --ignore-dir=tmp --ignore-dir=.git --ignore-dir=.idea'
