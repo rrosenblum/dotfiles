@@ -86,6 +86,9 @@ set wildignore+=*.luac                           " Lua byte code
 set wildignore+=migrations                       " Django migrations
 set wildignore+=*.pyc                            " Python byte code
 
+set fillchars+=vert:│
+autocmd ColorScheme * highlight VertSplit cterm=NONE ctermbg=NONE
+
 " Make those folders automatically if they don't already exist.
 if !isdirectory(expand(&undodir))
     call mkdir(expand(&undodir), "p")
