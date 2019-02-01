@@ -22,6 +22,8 @@
       path: git_completions
     ~/.pryrc:
       path: pryrc
+    ~/.setopts:
+      path: setopts
     ~/.tmux.conf:
       path: tmux.conf
     ~/.vim:
