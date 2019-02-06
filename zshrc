@@ -18,7 +18,6 @@ source ~/.setopts
 source ~/.aliases
 source ~/.git_completions/git-prompt.sh
 
-#fpath=(/usr/local/share/zsh-completions:~/.git_completions/:$fpath)
 fpath=(~/.git_completions $fpath)
 
 export LC_ALL=$LANG
@@ -48,7 +47,8 @@ autoload -U colors && colors # Enable colors in prompt
 autoload -U compinit # Command completion
 compinit
 
-zstyle ':completion:*:*:git:*' script ~/.git_completions/git-completion.bash
+#zstyle ':completion:*:*:git:*' script ~/.git_completions/git-completion.bash
+#zmodload -i zsh/complist # git-completion alternative. What else does this do?
 #zstyle '*' hosts $hosts
 
 autoload -U promptinit # Autoload prompts
