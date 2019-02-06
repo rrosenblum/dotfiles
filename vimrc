@@ -20,6 +20,7 @@ Plug 'janko-m/vim-test'
 Plug 'mhinz/vim-signify'
 Plug 'RRethy/vim-illuminate'
 Plug 'junegunn/vader.vim'
+Plug 'hashivim/vim-terraform'
 
 Plug 'benmills/vimux'
 Plug 'tmux-plugins/vim-tmux-focus-events'
