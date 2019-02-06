@@ -1,30 +1,17 @@
 call plug#begin('~/.local/share/nvim/plugged')
+" general enhancements
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'majutsushi/tagbar'
 Plug 'Shougo/unite.vim'
-
-Plug 'othree/javascript-libraries-syntax.vim'
-Plug 'tpope/vim-haml'
-Plug 'pangloss/vim-javascript'
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-rails'
-Plug 'ngmy/vim-rubocop'
-Plug 'tpope/vim-bundler'
-Plug 'rodjek/vim-puppet'
-Plug 'tpope/vim-fugitive'
+Plug 'benmills/vimux'
+Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'w0rp/ale'
 Plug 'janko-m/vim-test'
 Plug 'mhinz/vim-signify'
 Plug 'RRethy/vim-illuminate'
-Plug 'junegunn/vader.vim'
-Plug 'hashivim/vim-terraform'
-
-Plug 'benmills/vimux'
-Plug 'tmux-plugins/vim-tmux-focus-events'
-
 Plug 'google/vim-searchindex'
 Plug 'haya14busa/incsearch.vim'
 Plug 'mileszs/ack.vim'
@@ -32,9 +19,22 @@ Plug 'tpope/vim-endwise'
 Plug 'vim-scripts/YankRing.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --js-completer' }
+
+" language support
+Plug 'hashivim/vim-terraform'
+Plug 'junegunn/vader.vim'
+Plug 'ngmy/vim-rubocop'
+Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'rodjek/vim-puppet'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-haml'
+Plug 'tpope/vim-rails'
+Plug 'vim-ruby/vim-ruby'
 
 Plug 'JamshedVesuna/vim-markdown-preview'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --js-completer' }
 call plug#end()
 
 "python from powerline.vim import setup as powerline_setup
