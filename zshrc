@@ -60,3 +60,5 @@ is_linux() { [[ $OSTYPE == linux-gnu ]] }
 has_brew() { [[ -n ${commands[brew]} ]] }
 has_apt() { [[ -n ${commands[apt-get]} ]] }
 has_yum() { [[ -n ${commands[yum]} ]] }
+
+command -v nodenv > /dev/null && eval "$(nodenv init -)"
