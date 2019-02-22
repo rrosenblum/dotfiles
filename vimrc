@@ -19,6 +19,7 @@ Plug 'tpope/vim-endwise'
 Plug 'vim-scripts/YankRing.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'rhysd/clever-f.vim'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --js-completer' }
 
 " language support
