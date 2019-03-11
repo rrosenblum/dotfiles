@@ -26,8 +26,11 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --js-comp
 Plug 'hashivim/vim-terraform'
 Plug 'junegunn/vader.vim'
 Plug 'ngmy/vim-rubocop'
+" Plug 'pangloss/vim-javascript'
+" Plug 'jelera/vim-javascript-syntax'
+Plug 'othree/yajs.vim' " javascript syntax
+Plug 'othree/es.next.syntax.vim'
 Plug 'othree/javascript-libraries-syntax.vim'
-Plug 'pangloss/vim-javascript'
 Plug 'rodjek/vim-puppet'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-fugitive'
