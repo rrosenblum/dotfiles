@@ -19,7 +19,9 @@ Plug 'tpope/vim-endwise'
 Plug 'vim-scripts/YankRing.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --js-completer' }
+" Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --js-completer' }
+" Plug 'SirVer/ultisnips'
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 
 " language support
 Plug 'hashivim/vim-terraform'
@@ -56,6 +58,7 @@ set autoread
 set backspace=indent,eol,start
 set backup                        " enable backups
 set backupdir=~/.vim/tmp/backup// " backups
+set cmdheight=2 " better coc message display
 set dir=/tmp//
 set directory=~/.vim/tmp/swap//   " swap files
 set hlsearch
@@ -77,6 +80,7 @@ set textwidth=0 nosmartindent tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 set ttimeout
 set ttimeoutlen=10
 set undodir=~/.vim/tmp/undo//     " undo files
+set updatetime=300
 set wildmode=list:longest
 
 set wildignore+=.hg,.git,.svn                    " Version control
@@ -229,6 +233,23 @@ inoremap <buffer> <silent> <S-Home> <C-o>vg<Home>o<S-Right>o
 inoremap <buffer> <silent> <S-End> <C-o>vg<End>
 inoremap <buffer> <silent> <S-Up> <C-o>vgk
 inoremap <buffer> <silent> <S-Down> <C-o>vgj
+
+" coc configurations
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> for trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
 
 autocmd BufNewFile,BufRead *.json set ft=javascript
 " Highlight trailing whitespace
