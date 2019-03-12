@@ -12,10 +12,18 @@
       path: ackrc
     ~/.aliases:
       path: aliases
-    ~/.config/nvim/init.vim:
+    ~/.config/nvim:
       create: true
       force: true
-      path: init.vim
+      path: config/nvim
+    ~/.config/coc/extensions:
+      create: true
+      force: true
+      path: config/coc/extensions
+    ~/.config/nvim:
+      create: true
+      force: true
+      path: config/nvim
     ~/.gitconfig:
       path: gitconfig
     ~/.git_completions:
