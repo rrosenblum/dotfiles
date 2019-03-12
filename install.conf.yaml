@@ -26,9 +26,10 @@
       path: setopts
     ~/.tmux.conf:
       path: tmux.conf
-    ~/.vim:
+    ~/.vim/autoload:
+      create: true
       force: true
-      path: vim
+      path: vim/autoload
     ~/.vimrc:
       path: vimrc
     ~/.zshrc:
