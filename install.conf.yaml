@@ -12,10 +12,6 @@
       path: ackrc
     ~/.aliases:
       path: aliases
-    ~/.config/nvim:
-      create: true
-      force: true
-      path: config/nvim
     ~/.config/coc/extensions:
       create: true
       force: true
