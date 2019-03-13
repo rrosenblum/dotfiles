@@ -252,6 +252,8 @@ endfunction
 inoremap <silent><expr> <c-space> coc#refresh()
 
 autocmd BufNewFile,BufRead *.json set ft=javascript
+autocmd BufNewFile,BufRead Jenkinsfile set ft=groovy
+
 " Highlight trailing whitespace
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
