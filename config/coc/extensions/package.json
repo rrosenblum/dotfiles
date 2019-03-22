@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "coc-css": "^1.0.7",
+    "coc-eslint": "^1.1.0",
     "coc-highlight": "^1.0.5",
     "coc-html": "^1.0.7",
     "coc-json": "^1.0.12",
