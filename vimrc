@@ -189,6 +189,7 @@ map <silent> <LocalLeader>fb :CtrlPBuffer<CR>
 map <silent> <LocalLeader>rt :!ctags -R --exclude=".git\|.svn\|log\|tmp\|db\|pkg" --extra=+f<CR>
 map <silent> <LocalLeader>rl :wa<CR> :VimuxRunLastCommand<CR>
 map <silent> <LocalLeader>ra :RuboCop -a<CR>
+map <silent> <LocalLeader>af :ALEFix<CR>
 map <silent> <LocalLeader>tn :wa<CR> :TestNearest<CR>
 map <silent> <LocalLeader>tl :wa<CR> :TestLast<CR>
 map <silent> <LocalLeader>tf :wa<CR> :TestFile<CR>
@@ -200,7 +201,7 @@ nnoremap <silent> <LocalLeader>] :tabn<CR>
 nnoremap <silent> <LocalLeader>rr :set relativenumber!<cr>
 nnoremap <silent> <LocalLeader>tb :Tagbar<cr>
 nnoremap <leader>uf :<C-u>Unite file_rec<CR>
-nnoremap <leader>af :<C-u>Unite file_rec/async:!<CR>
+nnoremap <leader>uaf :<C-u>Unite file_rec/async:!<CR>
 nnoremap <silent> <leader>ub :<C-u>Unite buffer bookmark<CR>
 inoremap jj <ESC>
 if has('nvim')
