@@ -12,6 +12,10 @@
       path: ackrc
     ~/.aliases:
       path: aliases
+    ~/.bundle/config:
+      create: true
+      force: true
+      path: bundle/config
     ~/.config/coc/extensions:
       create: true
       force: true
