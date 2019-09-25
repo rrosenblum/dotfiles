@@ -21,7 +21,7 @@ source ~/.git_completions/git-prompt.sh
 fpath=(~/.git_completions $fpath)
 
 export LC_ALL=$LANG
-GIT_PS1_SHOWUPSTREAM=(verbose)
+GIT_PS1_SHOWUPSTREAM=(verbose name)
 export PROMPT='%n@%m:%~$(__git_ps1 " (%s)")\$ '
 export CLICOLOR=1
 export EDITOR=nvim
