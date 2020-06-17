@@ -21,7 +21,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 " Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --js-completer' }
 " Plug 'SirVer/ultisnips'
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#util#install()}}
 Plug 'https://gitlab.com/HiPhish/awk-ward.nvim'
 
 " language support
