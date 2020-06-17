@@ -177,9 +177,9 @@ let test#strategy = 'vimux'
 
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 " incsearch mappings
-map /  <Plug>(incsearch-forward)
-map ?  <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
+"map /  <Plug>(incsearch-forward)
+"map ?  <Plug>(incsearch-backward)
+"map g/ <Plug>(incsearch-stay)
 
 map <LocalLeader>aw :Ack! '<C-R><C-W>'
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
