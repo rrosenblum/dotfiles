@@ -1,13 +1,13 @@
 {
   "dependencies": {
     "coc-css": "^1.0.7",
-    "coc-eslint": "^1.1.0",
-    "coc-highlight": "^1.0.5",
-    "coc-html": "^1.0.7",
-    "coc-json": "^1.0.12",
-    "coc-snippets": "^1.0.19",
-    "coc-tsserver": "^1.1.29",
-    "coc-ultisnips": "^1.2.0",
-    "coc-yaml": "^1.0.0"
+    "coc-eslint": ">=1.2.7",
+    "coc-highlight": ">=1.2.5",
+    "coc-html": ">=1.2.4",
+    "coc-json": ">=1.2.6",
+    "coc-snippets": ">=2.1.28",
+    "coc-tsserver": ">=1.5.2",
+    "coc-ultisnips": ">=1.2.3",
+    "coc-yaml": ">=1.0.4"
   }
 }
