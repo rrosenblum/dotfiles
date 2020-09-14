@@ -268,9 +268,9 @@ highlight SignifySignAdd    cterm=bold ctermfg=119
 highlight SignifySignDelete cterm=bold ctermfg=167
 highlight SignifySignChange cterm=bold ctermfg=227
 
-highlight ALEError ctermbg=LightGrey ctermfg=Black
-highlight ALEWarning ctermbg=LightGrey ctermfg=Black
-highlight Search ctermbg=LightGrey ctermfg=Black
+highlight ALEError ctermbg=Grey ctermfg=Black
+highlight ALEWarning ctermbg=Grey ctermfg=Black
+highlight Search ctermbg=Grey ctermfg=Black
 
 autocmd FocusLost * stopinsert
 autocmd VimResized * :wincmd = " auto resize vim when the window is resized
