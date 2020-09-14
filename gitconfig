@@ -7,32 +7,34 @@
   timecard = "!timecard() { if [ -z $1 ]; then git log --since 1.week.ago; else git log --since 1.week.ago | grep -i $1; fi; }; timecard"
   unpushed = !"git log @{upstream}..HEAD"
 [color]
-	ui = auto
+  ui = auto
 [color "branch"]
-	current = yellow reverse
-	local = yellow
+  current = yellow reverse
+  local = yellow
   remote = green
 [color "diff"]
-	meta = yellow
-	frag = magenta
-	old = red
-	new = green
+  meta = yellow
+  frag = magenta
+  old = red
+  new = green
 [color "status"]
-	added = yellow
-	changed = green
-	untracked = cyan
+  added = yellow
+  changed = green
+  untracked = cyan
 [format]
-	pretty = format:"%h %C(yellow)%ci%Creset %Cgreen%an%Creset | %s"
+  pretty = format:"%h %C(yellow)%ci%Creset %Cgreen%an%Creset | %s"
 [merge]
   conflictstyle = diff3
 [push]
-	default = simple
+  default = simple
 [rebase]
   autostash = true
 [user]
-	name = Ryan Rosenblum
-	email = ryan.rosenblum@gmail.com
+  name = Ryan Rosenblum
+  email = ryan.rosenblum@gmail.com
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
+[pull]
+  rebase = false
