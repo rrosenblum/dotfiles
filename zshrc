@@ -2,6 +2,8 @@
 #https://wiki.archlinux.org/index.php/zsh
 #http://zanshin.net/2013/02/02/zsh-configuration-from-the-ground-up/
 
+# zmodload zsh/zprof # uncomment to debug performance
+
 autoload -U run-help
 autoload run-help-git
 autoload run-help-svn
@@ -69,6 +71,4 @@ command -v nodenv > /dev/null && eval "$(nodenv init -)"
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
 
-# tabtab source for slss package
-# uninstall by removing these lines or running `tabtab uninstall slss`
-[[ -f /Users/rrosenblum/work/geolocations_api/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/rrosenblum/work/geolocations_api/node_modules/tabtab/.completions/slss.zsh
+# zprof # uncomment to debug performance
