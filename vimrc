@@ -134,7 +134,7 @@ let g:ale_linters = {
 let g:ackhighlight = 1
 let g:ack_default_options = ' -s -H --nocolor --nogroup --column --ignore-dir=tmp --ignore-dir=.git --ignore-dir=.idea'
 if executable('ag')
-  let g:ackprg = "ag --vimgrep --column --nogroup --noheading"
+  let g:ackprg = 'ag --vimgrep --column --nogroup --noheading --hidden --nocolor -s --ignore-dir=tmp --ignore-dir=.git --ignore-dir=.idea'
 endif
 
 let g:ctrlp_clear_cache_on_exit = 0
