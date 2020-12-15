@@ -116,7 +116,7 @@ let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#tab_nr_type = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'simple'
+let g:airline_theme = 'deus'
 
 let g:ale_lint_delay = 1000
 let g:ale_ruby_rubocop_executable = 'bundle'
