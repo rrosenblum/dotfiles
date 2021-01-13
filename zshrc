@@ -29,8 +29,8 @@ export CLICOLOR=1
 export EDITOR=nvim
 
 if [ !is_mac ]; then
-  #export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/scala/bin:/usr/local/heroku/bin:$PATH
-  path=(/usr/local/sbin /opt/local/bin /opt/local/sbin /usr/local/scala/bin $path)
+  #export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+  path=(/usr/local/opt/python/libexec/bin /usr/local/sbin /opt/local/bin /opt/local/sbin $path)
 
   #if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
   if command -v rbenv > /dev/null; then eval "$(rbenv init -)"; fi
