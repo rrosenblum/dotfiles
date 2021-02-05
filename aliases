@@ -9,12 +9,6 @@ alias grep='grep --color=always'
 
 alias dotfiles='cd ~/dotfiles'
 
-# Manheim aliases
-alias ove='cd ~/work/ove'
-alias sim='cd ~/work/simulcast'
-alias dep='cd ~/work/simulcast_deployment'
-alias kiosk='cd ~/work/kiosk'
-
 # lolbash
 alias rtfm='man'
 alias tldr='less'
