@@ -72,4 +72,6 @@ command -v nodenv > /dev/null && eval "$(nodenv init -)"
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
 
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
 # zprof # uncomment to debug performance
