@@ -146,7 +146,8 @@ let g:ctrlp_custom_ignore = {
     \ 'file': '\.pyc$\|\.pyo$\|\.rbc$|\.rbo$\|\.class$\|\.o$\|\~$\',
     \ }
 let g:ctrlp_use_caching = 0
-let g:ctrlp_user_command = 'ag %s --files-with-matches -g ""'
+let g:ctrlp_user_command = 'ag %s --hidden --ignore-dir=.git --ignore-dir=.idea --ignore-dir=.hg --ignore-dir=.svn --files-with-matches -g ""'
+let g:ctrlp_show_hidden = 1
 
 let g:fzf_layout = { 'down': '~25%' }
 
