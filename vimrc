@@ -39,6 +39,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-haml'
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
+Plug 'aliou/sql-heredoc.vim'
 
 Plug 'JamshedVesuna/vim-markdown-preview'
 call plug#end()
