@@ -183,25 +183,25 @@ call unite#filters#matcher_default#use(['matcher_fuzzy'])
 "map ?  <Plug>(incsearch-backward)
 "map g/ <Plug>(incsearch-stay)
 
-map <LocalLeader>aw :Ack! '<C-R><C-W>'
-map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
-map <silent> <LocalLeader>nf :NERDTreeFind<CR>
-map <silent> <LocalLeader>ff :CtrlP<CR>
-map <silent> <LocalLeader>fb :CtrlPBuffer<CR>
-map <silent> <LocalLeader>rt :!ctags -R --exclude=".git\|.svn\|log\|tmp\|db\|pkg" --extra=+f<CR>
-map <silent> <LocalLeader>rl :wa<CR> :VimuxRunLastCommand<CR>
-map <silent> <LocalLeader>ra :RuboCop -a<CR>
-map <silent> <LocalLeader>af :ALEFix<CR>
-map <silent> <LocalLeader>tn :wa<CR> :TestNearest<CR>
-map <silent> <LocalLeader>tl :wa<CR> :TestLast<CR>
-map <silent> <LocalLeader>tf :wa<CR> :TestFile<CR>
-map <silent> <LocalLeader>tv :wa<CR> :TestVisit<CR>
-map <silent> <LocalLeader>yr :YRShow<CR>
-nnoremap <silent> <LocalLeader><CR> :tabe<CR>
-nnoremap <silent> <LocalLeader>[ :tabp<CR>
-nnoremap <silent> <LocalLeader>] :tabn<CR>
-nnoremap <silent> <LocalLeader>rr :set relativenumber!<cr>
-nnoremap <silent> <LocalLeader>tb :Tagbar<cr>
+map <Leader>aw :Ack! '<C-R><C-W>'
+map <silent> <Leader>nt :NERDTreeToggle<CR>
+map <silent> <Leader>nf :NERDTreeFind<CR>
+map <silent> <Leader>ff :CtrlP<CR>
+map <silent> <Leader>fb :CtrlPBuffer<CR>
+map <silent> <Leader>rt :!ctags -R --exclude=".git\|.svn\|log\|tmp\|db\|pkg" --extra=+f<CR>
+map <silent> <Leader>rl :wa<CR> :VimuxRunLastCommand<CR>
+map <silent> <Leader>ra :RuboCop -a<CR>
+map <silent> <Leader>af :ALEFix<CR>
+map <silent> <Leader>tn :wa<CR> :TestNearest<CR>
+map <silent> <Leader>tl :wa<CR> :TestLast<CR>
+map <silent> <Leader>tf :wa<CR> :TestFile<CR>
+map <silent> <Leader>tv :wa<CR> :TestVisit<CR>
+map <silent> <Leader>yr :YRShow<CR>
+nnoremap <silent> <Leader><CR> :tabe<CR>
+nnoremap <silent> <Leader>[ :tabp<CR>
+nnoremap <silent> <Leader>] :tabn<CR>
+nnoremap <silent> <Leader>rr :set relativenumber!<cr>
+nnoremap <silent> <Leader>tb :Tagbar<cr>
 nnoremap <leader>uf :<C-u>Unite file_rec<CR>
 nnoremap <leader>uaf :<C-u>Unite file_rec/async:!<CR>
 nnoremap <silent> <leader>ub :<C-u>Unite buffer bookmark<CR>
@@ -264,7 +264,7 @@ autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
 " Set up highlight group & retain through colorscheme changes
 highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-nnoremap <silent> <LocalLeader>ww :%s/\s\+$//<CR>:let @/=''<CR><C-o>
+nnoremap <silent> <Leader>ww :%s/\s\+$//<CR>:let @/=''<CR><C-o>
 highlight clear SignColumn
 highlight SignifySignAdd    cterm=bold ctermfg=119
 highlight SignifySignDelete cterm=bold ctermfg=167
