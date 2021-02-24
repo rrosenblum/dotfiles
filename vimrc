@@ -183,6 +183,7 @@ call unite#filters#matcher_default#use(['matcher_fuzzy'])
 "map ?  <Plug>(incsearch-backward)
 "map g/ <Plug>(incsearch-stay)
 
+let mapleader = " "
 map <Leader>aw :Ack! '<C-R><C-W>'
 map <silent> <Leader>nt :NERDTreeToggle<CR>
 map <silent> <Leader>nf :NERDTreeFind<CR>
