@@ -12,8 +12,8 @@ unalias run-help
 alias help=run-help
 
 export HELPDIR=/usr/local/share/zsh/help
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 HISTFILE=~/.zsh_history
 
 source ~/.setopts
