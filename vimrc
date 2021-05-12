@@ -42,6 +42,7 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'aliou/sql-heredoc.vim'
 
 Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'ryanoasis/vim-devicons' " load this last. It somehow relies on other plugins already being installed to determine what support it has
 call plug#end()
 
 "python from powerline.vim import setup as powerline_setup
