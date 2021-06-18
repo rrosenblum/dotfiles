@@ -157,11 +157,14 @@ let g:fzf_layout = { 'down': '~25%' }
 " use `echo synIDattr(synIDtrans(synID(line("."), col("."), 1)), "name")` to
 " determine the highlight-group of the word under the cursor
 let g:Illuminate_ftHighlightGroups = {
-      \ 'vim': ['vimVar', 'vimString', 'vimLineComment',
-      \         'vimFuncName', 'vimFunction', 'vimUserFunc', 'vimFunc'],
-      \ 'ruby': ['Constant', 'Define', 'Function', 'PreProc',
-      \          'rubyArrayLiteral', 'rubyBlock', 'rubyConditionalExpression',
-      \           'rubyCurlyBlock', 'rubyDoBlock', 'rubyMethodBlock', 'Type']
+      \ 'vim': [
+      \         'vimVar', 'vimString', 'vimLineComment', 'vimFuncName', 'vimFunction', 'vimUserFunc', 'vimFunc'
+      \        ],
+      \ 'ruby': [
+      \          'Constant', 'Define', 'Function', 'PreProc', 'rubyInstanceVariable', 'rubyArrayLiteral', 'rubyBlock',
+      \          'rubyBlockParameterList', 'rubyConditionalExpression', 'rubyCurlyBlock', 'rubyDoBlock',
+      \          'rubyMethodBlock', 'Type'
+      \         ]
       \ }
 
 let NERDTreeShowHidden=1
