@@ -23,6 +23,7 @@ Plug 'tpope/vim-repeat'
 " Plug 'SirVer/ultisnips'
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#util#install()}}
 Plug 'https://gitlab.com/HiPhish/awk-ward.nvim'
+Plug 'joeytwiddle/vim-diff-traffic-lights-colors'
 
 " language support
 Plug 'hashivim/vim-terraform'
