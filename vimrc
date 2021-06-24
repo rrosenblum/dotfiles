@@ -24,6 +24,7 @@ Plug 'tpope/vim-repeat'
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'yarn install --frozen-lockfile'}
 Plug 'https://gitlab.com/HiPhish/awk-ward.nvim'
 Plug 'joeytwiddle/vim-diff-traffic-lights-colors'
+Plug 'honza/vim-snippets'
 
 " language support
 Plug 'hashivim/vim-terraform'
@@ -252,15 +253,39 @@ inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+let g:coc_snippet_next = '<TAB>'
+let g:coc_snippet_prev = '<S-TAB>'
 
-" Use <c-space> for trigger completion.
-inoremap <silent><expr> <c-space> coc#refresh()
+" make <shift-tab> cycle backwards through suggestions
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+let g:endwise_no_mappings = "true"
+
+" Make <CR> auto-select the first completion item and notify coc.nvim to
+" format on enter, <cr> could be remapped by other vim plugin
+"
+" `DiscretionaryEnd` is a trigger for `vim-endwise`
+" This creates a bug where vim-endwise will want to insert extra `end` each
+" time you hit enter on the line
+" inoremap <expr><cr> pumvisible() ? "\<C-y>" : "\<CR>"
+" imap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR><Plug>DiscretionaryEnd"
+
+" Use ENTER to select completions from coc-snippets or trigger ENTER + vim-endwise.
+if exists('*complete_info')
+  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+  imap <expr> <CR> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<CR><Plug>DiscretionaryEnd"
+else
+  inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+  imap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR><Plug>DiscretionaryEnd"
+endif
+
+" Use `[g` and `]g` to navigate diagnostics
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+highlight Pmenu ctermbg=LightGray guibg=LightGray
 
 autocmd BufNewFile,BufRead *.json set ft=javascript
 autocmd BufNewFile,BufRead Jenkinsfile set ft=groovy

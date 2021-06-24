@@ -1,3 +1,51 @@
 {
-  "javascript.validate.enable": false
+  "diagnostic-languageserver.filetypes": {
+    "javascript": ["eslint", "prettier-eslint"],
+    "markdown": ["write-good", "markdownlint"],
+    "ruby": "rubocop",
+    "sh": "shellcheck",
+    "vim": "vint",
+  },
+  "diagnostic-languageserver.formatFiletypes": {
+    "javascript": ["eslint", "prettier-eslint"],
+    "ruby": "rubocop",
+    "sh": "shfmt",
+  },
+  "diagnostic-languageserver.mergeConfig": true,
+  "diagnostic-languageserver.linters": {
+    "rubocop": {
+      "command": "bundle",
+      "sourceName": "rubocop",
+      "debounce": 100,
+      "args": [
+        "exec",
+        "rubocop",
+        "--format",
+        "json",
+        "--force-exclusion",
+        "--stdin",
+        "%filepath"
+      ],
+      "parseJson": {
+        "errorsRoot": "files[0].offenses",
+        "line": "location.start_line",
+        "endLine": "location.last_line",
+        "column": "location.start_column",
+        "endColumn": "location.end_column",
+        "message": "[${cop_name}] ${message}",
+        "security": "severity"
+      },
+      "securities": {
+        "fatal": "error",
+        "error": "error",
+        "warning": "warning",
+        "convention": "info",
+        "refactor": "info",
+        "info": "info"
+      }
+    }
+  },
+  "javascript.validate.enable": false,
+  "solargraph.diagnostics": true,
+  "solargraph.formatting": true,
 }
