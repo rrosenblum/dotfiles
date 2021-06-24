@@ -249,6 +249,9 @@ inoremap <buffer> <silent> <S-Down> <C-o>vgj
 " coc configurations
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+let g:coc_global_extensions = ["coc-css", "coc-diagnostic", "coc-eslint", "coc-highlight",
+                             \ "coc-html", "coc-json", "coc-snippets", "coc-solargraph",
+                             \ "coc-tsserver", "coc-ultisnips", "coc-yaml"]
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
