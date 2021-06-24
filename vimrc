@@ -165,7 +165,7 @@ let g:Illuminate_ftHighlightGroups = {
       \          'Constant', 'Define', 'Function', 'PreProc', 'rubyInstanceVariable', 'rubyArrayLiteral', 'rubyBlock',
       \          'rubyBlockParameterList', 'rubyConditionalExpression', 'rubyCurlyBlock', 'rubyDoBlock',
       \          'rubyMethodBlock', 'Type', 'rubyRepeatExpression', 'rubyOptionalDoLine', 'rubyCaseExpression',
-      \          'rubyBangPredicateMethod', 'rubyAssertion'
+      \          'rubyBangPredicateMethod', 'rubyAssertion', 'rubyClassBlock'
       \         ]
       \ }
 
