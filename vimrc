@@ -1,5 +1,6 @@
 call plug#begin('~/.local/share/nvim/plugged')
 " general enhancements
+Plug 'lifepillar/vim-solarized8'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
@@ -47,17 +48,12 @@ Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'ryanoasis/vim-devicons' " load this last. It somehow relies on other plugins already being installed to determine what support it has
 call plug#end()
 
-"python from powerline.vim import setup as powerline_setup
-"python powerline_setup()
-"python del powerline_setup
-
 syntax enable
+set termguicolors
 set background=dark
-"let g:solarized_termcolors=256
-"colorscheme solarized
 filetype plugin indent on
 compiler ruby
-colorscheme slate
+colorscheme solarized8
 
 set autoread
 set backspace=indent,eol,start
@@ -99,7 +95,7 @@ set wildignore+=*.luac                           " Lua byte code
 set wildignore+=migrations                       " Django migrations
 set wildignore+=*.pyc                            " Python byte code
 
-set fillchars+=vert:│
+set fillchars+=vert:│ " use a larger vertical character so that the vertical split is a solid line
 autocmd ColorScheme * highlight VertSplit cterm=NONE ctermbg=NONE
 
 " Make those folders automatically if they don't already exist.
@@ -288,7 +284,6 @@ endif
 " Use `[g` and `]g` to navigate diagnostics
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
-highlight Pmenu ctermbg=LightGray guibg=LightGray
 
 autocmd BufNewFile,BufRead *.json set ft=javascript
 autocmd BufNewFile,BufRead Jenkinsfile set ft=groovy
@@ -304,10 +299,6 @@ highlight clear SignColumn
 highlight SignifySignAdd    cterm=bold ctermfg=119
 highlight SignifySignDelete cterm=bold ctermfg=167
 highlight SignifySignChange cterm=bold ctermfg=227
-
-highlight ALEError ctermbg=Grey ctermfg=Black
-highlight ALEWarning ctermbg=Grey ctermfg=Black
-highlight Search ctermbg=Grey ctermfg=Black
 
 autocmd FocusLost * stopinsert
 autocmd VimResized * :wincmd = " auto resize vim when the window is resized
