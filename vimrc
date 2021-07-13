@@ -43,6 +43,7 @@ Plug 'tpope/vim-haml'
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
 Plug 'aliou/sql-heredoc.vim'
+Plug 'slim-template/vim-slim'
 
 Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'ryanoasis/vim-devicons' " load this last. It somehow relies on other plugins already being installed to determine what support it has
