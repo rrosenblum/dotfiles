@@ -27,6 +27,7 @@ Plug 'joeytwiddle/vim-diff-traffic-lights-colors'
 
 " language support
 Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'
 Plug 'rafamadriz/friendly-snippets'
@@ -369,6 +370,21 @@ nvim_lsp.tsserver.setup{
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noinsert'
+
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true,
+    custom_captures = {
+      -- Highlight the @foo.bar capture group with the "Identifier" highlight group.
+      ["foo.bar"] = "Identifier",
+    },
+    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+    -- Using this option may slow down your editor, and you may see some duplicate highlights.
+    -- Instead of true it can also be a list of languages
+    additional_vim_regex_highlighting = false,
+  },
+}
 EOF
 
 autocmd BufNewFile,BufRead *.json set ft=javascript
