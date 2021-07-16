@@ -356,8 +356,8 @@ nvim_lsp.solargraph.setup{
   capabilities = capabilities,
   settings = {
     solargraph = {
-      diagnostics = true;
-      formatting = true;
+      diagnostics = false,
+      formatting = false,
     }
   }
 }
