@@ -156,19 +156,7 @@ let g:ctrlp_show_hidden = 1
 
 let g:fzf_layout = { 'down': '~25%' }
 
-" use `echo synIDattr(synIDtrans(synID(line("."), col("."), 1)), "name")` to
-" determine the highlight-group of the word under the cursor
-let g:Illuminate_ftHighlightGroups = {
-      \ 'vim': [
-      \         'vimVar', 'vimString', 'vimLineComment', 'vimFuncName', 'vimFunction', 'vimUserFunc', 'vimFunc'
-      \        ],
-      \ 'ruby': [
-      \          'Constant', 'Define', 'Function', 'PreProc', 'rubyInstanceVariable', 'rubyArrayLiteral', 'rubyBlock',
-      \          'rubyBlockParameterList', 'rubyConditionalExpression', 'rubyCurlyBlock', 'rubyDoBlock',
-      \          'rubyMethodBlock', 'Type', 'rubyRepeatExpression', 'rubyOptionalDoLine', 'rubyCaseExpression',
-      \          'rubyBangPredicateMethod', 'rubyAssertion', 'rubyClassBlock'
-      \         ]
-      \ }
+let g:Illuminate_ftblacklist = ['nerdtree']
 
 let NERDTreeShowHidden=1
 let NERDTreeAutoDeleteBuffer=1
@@ -279,6 +267,8 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
   buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
   buf_set_keymap("n", "<space>lf", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+
+  require('illuminate').on_attach(client)
 end
 
 require'compe'.setup {
