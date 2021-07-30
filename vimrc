@@ -341,6 +341,24 @@ vim.api.nvim_set_keymap('i', '<cr>', 'compe#confirm("<cr>")', {silent = true, ex
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
+nvim_lsp.bashls.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
+nvim_lsp.jsonls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  -- filetypes = { "json" },
+  commands = {
+    Format = {
+      function()
+        vim.lsp.buf.range_formatting({},{0,0},{vim.fn.line("$"),0})
+      end
+    }
+  }
+}
+
 nvim_lsp.solargraph.setup{
   -- on_attach=require'completion'.on_attach;
   on_attach = on_attach,
@@ -354,6 +372,11 @@ nvim_lsp.solargraph.setup{
 }
 
 nvim_lsp.tsserver.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
+nvim_lsp.yamlls.setup{
   on_attach = on_attach,
   capabilities = capabilities,
 }
