@@ -246,8 +246,6 @@ inoremap <buffer> <silent> <S-Up> <C-o>vgk
 inoremap <buffer> <silent> <S-Down> <C-o>vgj
 
 " Make `Tab` indent and `S-Tab` outdent in all modes
-nnoremap <Tab> >>_
-nnoremap <S-Tab> <<_
 inoremap <S-Tab> <C-D>
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
