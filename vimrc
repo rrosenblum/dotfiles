@@ -27,7 +27,7 @@ Plug 'joeytwiddle/vim-diff-traffic-lights-colors'
 
 " language support
 Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-treesitter/nvim-treesitter', {'branch': '0.5-compat', 'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " nvim-cmp
 Plug 'hrsh7th/cmp-nvim-lsp'
