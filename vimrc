@@ -28,6 +28,7 @@ Plug 'joeytwiddle/vim-diff-traffic-lights-colors'
 " language support
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'towolf/vim-helm'
 
 " nvim-cmp
 Plug 'hrsh7th/cmp-nvim-lsp'
