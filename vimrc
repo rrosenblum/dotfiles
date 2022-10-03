@@ -82,6 +82,7 @@ set ignorecase
 set incsearch
 set laststatus=2
 set linebreak
+set mouse= " disable mouse support
 set nocompatible
 set noshowmode
 set noswapfile                    " it's 2013, Vim.
