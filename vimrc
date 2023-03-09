@@ -1,6 +1,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
 " general enhancements
 Plug 'lifepillar/vim-solarized8'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
@@ -68,7 +69,7 @@ set termguicolors
 set background=dark
 filetype plugin indent on
 compiler ruby
-colorscheme solarized8
+colorscheme catppuccin
 
 set autoread
 set backspace=indent,eol,start
