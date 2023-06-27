@@ -34,6 +34,9 @@ if [ !is_mac ]; then
 fi
 
 if command -v rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if command -v goenv > /dev/null; then eval "$(goenv init -)"; fi
+command -v nodenv > /dev/null && eval "$(nodenv init -)"
+command -v jenv > /dev/null && eval "$(jenv init -)"
 
 bindkey -e # emacs
 # bindkey -v # vi
@@ -60,9 +63,6 @@ is_linux() { [[ $OSTYPE == linux-gnu ]] }
 has_brew() { [[ -n ${commands[brew]} ]] }
 has_apt() { [[ -n ${commands[apt-get]} ]] }
 has_yum() { [[ -n ${commands[yum]} ]] }
-
-command -v nodenv > /dev/null && eval "$(nodenv init -)"
-# command -v jenv > /dev/null && eval "$(jenv init -)"
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
