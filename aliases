@@ -12,5 +12,6 @@ alias dotfiles='cd ~/dotfiles'
 # lolbash
 alias rtfm='man'
 alias tldr='less'
+alias parrot='curl parrot.live'
 alias nyan='telnet nyancat.dakko.us'
 alias star_wars='telnet towel.blinkenlights.nl'
