@@ -33,8 +33,8 @@ if [ !is_mac ]; then
   path=(/usr/local/opt/python/libexec/bin /usr/local/sbin /opt/local/bin /opt/local/sbin $path)
 fi
 
-if command -v rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-if command -v goenv > /dev/null; then eval "$(goenv init -)"; fi
+command -v rbenv > /dev/null && eval "$(rbenv init -)"
+command -v goenv > /dev/null && eval "$(goenv init -)"
 command -v nodenv > /dev/null && eval "$(nodenv init -)"
 command -v jenv > /dev/null && eval "$(jenv init -)"
 
